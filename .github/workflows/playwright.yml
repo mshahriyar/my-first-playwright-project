@@ -19,6 +19,12 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        BASE_URL: https://www.saucedemo.com
+        SAUCEDEMO_STANDARD_USER: standard_user
+        SAUCEDEMO_LOCKED_USER: locked_out_user
+        SAUCEDEMO_PROBLEM_USER: problem_user
+        SAUCEDEMO_PASSWORD: secret_sauce
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
