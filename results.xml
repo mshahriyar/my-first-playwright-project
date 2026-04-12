@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.206057">
+<testsuite name="saucedemo/cart.spec.ts" timestamp="2026-04-12T16:40:13.392Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.202" errors="0">
+<testcase name="Cart Item Display Details › should display correct quantity for each cart item" classname="saucedemo/cart.spec.ts" time="1.613">
+</testcase>
+<testcase name="Cart Item Display Details › should display product descriptions in cart" classname="saucedemo/cart.spec.ts" time="1.589">
+</testcase>
+</testsuite>
+</testsuites>
