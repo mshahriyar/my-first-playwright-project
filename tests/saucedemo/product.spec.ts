@@ -23,7 +23,7 @@ test.describe('SauceDemo Products Tests', () => {
         expect(isBurgerMenuVisible).toBe(true);
         await productPage.openBurgerMenu();
     });
-    test.only('User can logout using burger menu', async ({ page }) => {
+    test('User can logout using burger menu', async ({ page }) => {
         const productPage = new ProductPage(page);
         const isBurgerMenuVisible = await productPage.isBurgerMenuVisible();
         expect(isBurgerMenuVisible).toBe(true);

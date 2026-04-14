@@ -1,8 +1,66 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.206057">
-<testsuite name="saucedemo/cart.spec.ts" timestamp="2026-04-12T16:40:13.392Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.202" errors="0">
-<testcase name="Cart Item Display Details › should display correct quantity for each cart item" classname="saucedemo/cart.spec.ts" time="1.613">
+<testsuites id="" name="" tests="24" failures="0" skipped="0" errors="0" time="6.717212000000001">
+<testsuite name="saucedemo/cart.spec.ts" timestamp="2026-04-14T12:55:58.363Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.131" errors="0">
+<testcase name="Cart Item Display Details › should display correct quantity for each cart item" classname="saucedemo/cart.spec.ts" time="1.568">
 </testcase>
-<testcase name="Cart Item Display Details › should display product descriptions in cart" classname="saucedemo/cart.spec.ts" time="1.589">
+<testcase name="Cart Item Display Details › should display product descriptions in cart" classname="saucedemo/cart.spec.ts" time="1.563">
+</testcase>
+</testsuite>
+<testsuite name="saucedemo/checkout.spec.ts" timestamp="2026-04-14T12:55:58.363Z" hostname="chromium" tests="4" failures="0" skipped="0" time="6.526" errors="0">
+<testcase name="SauceDemo End-to-End Checkout Tests › User can checkout with multiple products and validate total price" classname="saucedemo/checkout.spec.ts" time="1.74">
+<system-out>
+<![CDATA[[checkout-multiple] subtotal=Item total: $39.98 tax=Tax: $3.20 total=Total: $43.18
+]]>
+</system-out>
+</testcase>
+<testcase name="SauceDemo End-to-End Checkout Tests › checkout with single product" classname="saucedemo/checkout.spec.ts" time="1.712">
+<system-out>
+<![CDATA[[checkout-single] subtotal=Item total: $49.99 tax=Tax: $4.00 total=Total: $53.99
+]]>
+</system-out>
+</testcase>
+<testcase name="SauceDemo End-to-End Checkout Tests › Cannot checkout with empty cart" classname="saucedemo/checkout.spec.ts" time="1.393">
+</testcase>
+<testcase name="SauceDemo End-to-End Checkout Tests › Quick checkout" classname="saucedemo/checkout.spec.ts" time="1.681">
+</testcase>
+</testsuite>
+<testsuite name="saucedemo/login.spec.ts" timestamp="2026-04-14T12:55:58.363Z" hostname="chromium" tests="7" failures="0" skipped="0" time="6.718" errors="0">
+<testcase name="SauceDemo Login Tests › user can successfully login with standard user" classname="saucedemo/login.spec.ts" time="0.983">
+</testcase>
+<testcase name="SauceDemo Login Tests › user cannot login with invalid credentials" classname="saucedemo/login.spec.ts" time="0.941">
+</testcase>
+<testcase name="SauceDemo Login Tests › user cannot login with empty credentials" classname="saucedemo/login.spec.ts" time="0.979">
+</testcase>
+<testcase name="SauceDemo Login Tests › user cannot login with empty password" classname="saucedemo/login.spec.ts" time="0.94">
+</testcase>
+<testcase name="SauceDemo Login Tests › user cannot login with empty username" classname="saucedemo/login.spec.ts" time="0.897">
+</testcase>
+<testcase name="SauceDemo Login Tests › login fails with locked out user" classname="saucedemo/login.spec.ts" time="0.914">
+</testcase>
+<testcase name="SauceDemo Login Tests › can clear error message" classname="saucedemo/login.spec.ts" time="1.064">
+</testcase>
+</testsuite>
+<testsuite name="saucedemo/product.spec.ts" timestamp="2026-04-14T12:55:58.363Z" hostname="chromium" tests="11" failures="0" skipped="0" time="12.447" errors="0">
+<testcase name="SauceDemo Products Tests › Products page displays correct title" classname="saucedemo/product.spec.ts" time="1.08">
+</testcase>
+<testcase name="SauceDemo Products Tests › Burge Menu is visible and functional" classname="saucedemo/product.spec.ts" time="1.064">
+</testcase>
+<testcase name="SauceDemo Products Tests › User can logout using burger menu" classname="saucedemo/product.spec.ts" time="2.016">
+</testcase>
+<testcase name="SauceDemo Products Tests › Products page displays correct number of products" classname="saucedemo/product.spec.ts" time="1.055">
+</testcase>
+<testcase name="SauceDemo Products Tests › Product can add to the cart" classname="saucedemo/product.spec.ts" time="1.073">
+</testcase>
+<testcase name="SauceDemo Products Tests › User can add multiple products to the cart" classname="saucedemo/product.spec.ts" time="1.112">
+</testcase>
+<testcase name="SauceDemo Products Tests › User can remove product from the cart" classname="saucedemo/product.spec.ts" time="1.104">
+</testcase>
+<testcase name="SauceDemo Products Tests › can sort products by name A-Z" classname="saucedemo/product.spec.ts" time="1.017">
+</testcase>
+<testcase name="SauceDemo Products Tests ›  can sort products by name Z-A" classname="saucedemo/product.spec.ts" time="1.039">
+</testcase>
+<testcase name="SauceDemo Products Tests › can sort products by price low to high" classname="saucedemo/product.spec.ts" time="1.038">
+</testcase>
+<testcase name="SauceDemo Products Tests › can sort products by price high to low" classname="saucedemo/product.spec.ts" time="0.849">
 </testcase>
 </testsuite>
 </testsuites>

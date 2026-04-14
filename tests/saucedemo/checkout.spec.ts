@@ -37,7 +37,7 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         await checkoutPage.clickContinue();
         const { name, quantity } = await cartPage.getCartItemDetails('Sauce Labs Backpack');
         expect(name).toBe('Sauce Labs Backpack');
-        expect(quantity).toBe('1'); 
+        expect(quantity).toBe(1); 
         //get price of each item and calculate expected subtotal
         const price1 = await cartPage.getItemPrice('Sauce Labs Backpack');
         const price2 = await cartPage.getItemPrice('Sauce Labs Bike Light');
@@ -47,7 +47,7 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         expect(itemDescription).toBeTruthy();
         const { name: name2, quantity: quantity2 } = await cartPage.getCartItemDetails('Sauce Labs Bike Light');
         expect(name2).toBe('Sauce Labs Bike Light');
-        expect(quantity2).toBe('1');
+        expect(quantity2).toBe(1);
         const itemDescription2 = await cartPage.getProductDescription('Sauce Labs Bike Light');
         expect(itemDescription2).toBeTruthy();
         //Verify payment and shipping information
@@ -107,7 +107,7 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         //Verify item details on checkout overview
         const { name, quantity } = await cartPage.getCartItemDetails('Sauce Labs Fleece Jacket');
         expect(name).toBe('Sauce Labs Fleece Jacket');
-        expect(quantity).toBe('1'); 
+        expect(quantity).toBe(1); 
         const itemDescription = await cartPage.getProductDescription('Sauce Labs Fleece Jacket');
         expect(itemDescription).toBeTruthy();
         //Verify payment and shipping information
