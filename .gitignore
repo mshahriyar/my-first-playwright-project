@@ -71,4 +71,6 @@ screenshots/
  
 videos/
 
+# Playwright result artifacts
 results.xml
+test-results.json
