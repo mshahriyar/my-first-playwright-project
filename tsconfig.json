@@ -13,6 +13,6 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["tests", "page-objects", "utils", "test-data"],
+  "include": ["tests", "page-objects", "utils", "test-data", "json"],
   "exclude": ["node_modules", "playwright-report"]
 }

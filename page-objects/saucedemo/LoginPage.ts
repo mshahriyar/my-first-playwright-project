@@ -31,14 +31,9 @@ export class LoginPage extends BasePage {
     async getErrorMessage(): Promise<string>{
         return await this.errorMessage.textContent() || '';
     }
-
-    // async isErrorVisible(): Promise<boolean>{
-    //     return await this.errorMessage.isVisible();
-    // }
     async clearError(){
         await this.errorButton.click();
     }
-
     async isLoginButtonEnabled(): Promise<boolean>{
         return await this.loginButton.isEnabled();
     }
