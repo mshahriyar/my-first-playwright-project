@@ -1,6 +1,8 @@
 import {test, expect} from '@playwright/test';
 
 const BASE_URL = process.env.FAKESTORE_BASE_URL ?? 'https://fakestoreapi.com';
+const shouldSkipExternalTestsInCi =
+  !!process.env.CI && !['1', 'true', 'yes'].includes((process.env.FAKESTORE_ALLOW_EXTERNAL ?? '').toLowerCase());
 const shouldSkipWriteTestsInCi =
   !!process.env.CI && !['1', 'true', 'yes'].includes((process.env.FAKESTORE_ALLOW_WRITES ?? '').toLowerCase());
 
@@ -18,6 +20,11 @@ async function expectStatus(response: import('@playwright/test').APIResponse, ex
 }
 
 test.describe('FakeStoreAPI Tests', () => {
+    test.skip(
+      shouldSkipExternalTestsInCi,
+      'External API tests disabled in CI unless FAKESTORE_ALLOW_EXTERNAL=true (public APIs often block CI runner IPs).'
+    );
+
     test('GET /products - should return a list of products', async ({ request }) => {
         const response = await request.get(`${BASE_URL}/products`);
         await expectStatus(response, 200);
