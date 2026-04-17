@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage} from '../../page-objects/saucedemo/LoginPage';
-import { SauceDemoUsers } from '../../utils/demo-user-data';
+import { LoginPage} from '../../../page-objects/saucedemo/LoginPage';
+import { SauceDemoUsers } from '../../../utils/demo-user-data';
 
  
 test.describe('SauceDemo Login Tests', () => {
@@ -10,7 +10,7 @@ test.describe('SauceDemo Login Tests', () => {
     await loginPage.goto();
     });
 
-    test('user can successfully login with standard user', async ({ page }) => {
+    test('user can successfully login with standard user @smoke @critical @regression', async ({ page }) => {
         await loginPage.login(SauceDemoUsers.standard.username, SauceDemoUsers.standard.password);
         await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
         await expect(page.locator('.title')).toHaveText('Products');

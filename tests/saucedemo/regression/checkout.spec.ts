@@ -1,20 +1,15 @@
-import {test, expect} from '@playwright/test';
+import {test, expect} from '../../../fixtures/saucedemo';
 
-import { LoginPage} from '../../page-objects/saucedemo/LoginPage';
-import { ProductPage } from '../../page-objects/saucedemo/ProductPage';
-import { CartPage } from '../../page-objects/saucedemo/CartPage';
-import { CheckoutPage } from '../../page-objects/saucedemo/CheckoutPage';
-import { loginAsStandardUser, addProductsToCart, removeProductsFromCart } from '../../utils/helpers';
-import type { CheckoutInfo } from '../../types/saucedemo/checkout';
+
+import { loginAsStandardUser, addProductsToCart, removeProductsFromCart } from '../../../utils/helpers';
+import type { CheckoutInfo } from '../../../types/saucedemo/checkout';
 
 test.describe('SauceDemo End-to-End Checkout Tests', () => {
-
-    test('User can checkout with multiple products and validate total price', async ({ page }) => {
-        const loginPage = new LoginPage(page);
-        await loginPage.goto();
-        await loginPage.login('standard_user', 'secret_sauce');
+    test.beforeEach(async ({page}) =>{
+        await loginAsStandardUser(page)
+    })
+    test('User can checkout with multiple products and validate total price @e2e @regression', async ({ productPage, cartPage, checkoutPage }) => {
         //Add products
-        const productPage = new ProductPage(page);
         await productPage.addProductToCartByName('Sauce Labs Backpack');
         await productPage.addProductToCartByName('Sauce Labs Bike Light');
         //verify cart count and badge
@@ -23,7 +18,7 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         //go to cart
         await productPage.clickShoppingCart();
         //verify cart items
-        const cartPage = new CartPage(page);
+
         const itemCount = await cartPage.getCartItemCount();
         expect(itemCount).toBe(2);
         const cartItems = await cartPage.getCartItemNames();
@@ -32,7 +27,7 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         //proceed to checkout
         await cartPage.clickCheckout();
         //fill checkout info
-        const checkoutPage = new CheckoutPage(page);    
+  
         await checkoutPage.fillingShippingInformation('John', 'Doe', '12345');
         await checkoutPage.clickContinue();
         const { name, quantity } = await cartPage.getCartItemDetails('Sauce Labs Backpack');
@@ -78,12 +73,10 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         expect(completeMessage).toContain('Thank you for your order');
     });
 
-    test('checkout with single product', async ({ page }) => {
-        const loginPage = new LoginPage(page);
-        await loginPage.goto();
-        await loginPage.login('standard_user', 'secret_sauce');
+    test('checkout with single product @visual @critical', async ({ productPage, cartPage, checkoutPage }) => {
+
         //Add product
-        const productPage = new ProductPage(page);
+
         await productPage.addProductToCartByName('Sauce Labs Fleece Jacket');
         //verify cart count and badge
         const cartCount = await productPage.getCartItemCount();
@@ -91,7 +84,6 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         //go to cart
         await productPage.clickShoppingCart();
         //verify cart items
-        const cartPage = new CartPage(page);
         const itemCount = await cartPage.getCartItemCount();
         expect(itemCount).toBe(1);
         const cartItems = await cartPage.getCartItemNames();
@@ -101,7 +93,6 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         //proceed to checkout
         await cartPage.clickCheckout();
         //fill checkout info
-        const checkoutPage = new CheckoutPage(page);
         await checkoutPage.fillingShippingInformation('Jane', 'Smith', '54321');
         await checkoutPage.clickContinue();
         //Verify item details on checkout overview
@@ -138,15 +129,11 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         expect(completeMessage).toContain('Thank you for your order');
     });
 
-    test('Cannot checkout with empty cart', async ({ page }) => {
-        const loginPage = new LoginPage(page);
-        await loginPage.goto();
-        await loginPage.login('standard_user', 'secret_sauce');
+    test('Cannot checkout with empty cart', async ({ productPage, cartPage, page }) => {
+
         //go to cart
-        const productPage = new ProductPage(page);
         await productPage.clickShoppingCart();
         //verify cart is empty
-        const cartPage = new CartPage(page);
         const itemCount = await cartPage.getCartItemCount();
         expect(itemCount).toBe(0);
         //try to checkout
@@ -155,15 +142,13 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         await expect(page).toHaveURL(/.*checkout-step-one.*/);
     });
     //better test case writing
-    test('Quick checkout', async ({ page }) => {
-        await loginAsStandardUser(page);
+    test('Quick checkout', async ({ productPage, cartPage, checkoutPage, page }) => {
+
         await addProductsToCart(page, ['Sauce Labs Backpack', 'Sauce Labs Fleece Jacket']);
         await removeProductsFromCart(page, ['Sauce Labs Backpack']);
-        const productPage = new ProductPage(page);
+
         await productPage.clickShoppingCart();
-        const cartPage = new CartPage(page);
         await cartPage.clickCheckout();
-        const checkoutPage = new CheckoutPage(page);
         const shippingInfo: CheckoutInfo = {
             firstName: 'John',
             lastName: 'Doe',
@@ -175,6 +160,32 @@ test.describe('SauceDemo End-to-End Checkout Tests', () => {
         await checkoutPage.clickFinish();
         const isComplete = await checkoutPage.isOrderComplete();
         expect(isComplete).toBe(true);
+    });
+    test('complete checkout flow with steps', async ({productPage, cartPage, checkoutPage, page}) =>{
+        await test.step('Login', async () =>{
+            await loginAsStandardUser(page);
+        })
+        await test.step('Add products to card', async () =>{
+            await productPage.addProductToCartByName('Sauce Labs Backpack')
+            await productPage.addProductToCartByName('Sauce Labs Bike Light');
+        })
+        await test.step('Navigate to cart', async()=>{
+            await productPage.clickShoppingCart()
+        })
+        await test.step('Verify cart contents', async () =>{
+            const itemCount = await cartPage.getCartItemCount();
+            expect(itemCount).toBe(2);
+        })
+        await test.step('Complete checkout', async ()=>{
+            await cartPage.clickCheckout();
+            await checkoutPage.fillingShippingInformation('John', 'Doe', '1234');
+            await checkoutPage.clickContinue()
+            await checkoutPage.clickFinish()
+        })
+        await test.step('Verify order completeion', async () =>{
+            const isComplete = await checkoutPage.isOrderComplete();
+            expect(isComplete).toBeTruthy();
+        })
     });
 
     test.afterEach(async ({ page }, testInfo) => {

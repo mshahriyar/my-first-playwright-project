@@ -1,21 +1,12 @@
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../page-objects/saucedemo/LoginPage';
-import { ProductPage } from '../../page-objects/saucedemo/ProductPage';
-import { CartPage } from '../../page-objects/saucedemo/CartPage';
-import { loginAsStandardUser, addProductsToCart } from '../../utils/helpers';
-test.describe('Cart Item Display Details', () => {
-    let loginPage: LoginPage;
-    let productPage: ProductPage;
-    let cartPage: CartPage;
-    test.beforeEach(async ({ page }) => {
-        loginPage = new LoginPage(page);
-        productPage = new ProductPage(page);
-        cartPage = new CartPage(page);
+import { test, expect } from '../../../fixtures/saucedemo';
 
-        // Login before each test
-        await loginAsStandardUser(page);
-    });
-    test('should display correct quantity for each cart item', async ({ page }) => {
+import { loginAsStandardUser, addProductsToCart } from '../../../utils/helpers';
+
+test.describe('Cart Item Display Details', () => {
+    test.beforeEach(async ({page}) =>{
+        await loginAsStandardUser(page)
+    })
+    test('should display correct quantity for each cart item', async ({ productPage, cartPage, page }) => {
         // Add multiple items
         await addProductsToCart(page, ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt']);
         await productPage.clickShoppingCart();
@@ -32,7 +23,7 @@ test.describe('Cart Item Display Details', () => {
         expect(bikeLightDetails.name).toBe('Sauce Labs Bike Light'); 
         expect(tshirtDetails.name).toBe('Sauce Labs Bolt T-Shirt'); 
     });
-    test('should display product descriptions in cart', async () => {
+    test('should display product descriptions in cart', async ({productPage, cartPage}) => {
  
         // Add items with known descriptions
         await productPage.addProductToCartByName('Sauce Labs Backpack');

@@ -1,30 +1,22 @@
-import {test, expect} from '@playwright/test';
+import { test, expect } from '../../../fixtures/saucedemo';
 
-import { LoginPage} from '../../page-objects/saucedemo/LoginPage';
-import { ProductPage } from '../../page-objects/saucedemo/ProductPage';
-import { SortOption } from '../../utils/saucedemo-data';
+import { LoginPage} from '../../../page-objects/saucedemo/LoginPage';
+import { ProductPage } from '../../../page-objects/saucedemo/ProductPage';
+import { SortOption } from '../../../utils/saucedemo-data';
 //how to import enum from page object
 
 test.describe('SauceDemo Products Tests', () => {
 
-    test.beforeEach(async ({ page }) => {
-        const loginPage = new LoginPage(page);
-        await loginPage.goto();
-        await loginPage.login('standard_user', 'secret_sauce');
-        await expect(page.locator('.app_logo')).toHaveText('Swag Labs');
-    });
-
-    test('Products page displays correct title', async ({ page }) => {
+    test('Products page displays correct title', async ({ authenticatedPage, page }) => {
         await expect(page.locator('.title')).toHaveText('Products');
     });
-    test('Burge Menu is visible and functional', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('Burge Menu is visible and functional', async ({ authenticatedPage, productPage }) => {
+
         const isBurgerMenuVisible = await productPage.isBurgerMenuVisible();
         expect(isBurgerMenuVisible).toBe(true);
         await productPage.openBurgerMenu();
     });
-    test('User can logout using burger menu', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('User can logout using burger menu', async ({ authenticatedPage, productPage, page }) => {
         const isBurgerMenuVisible = await productPage.isBurgerMenuVisible();
         expect(isBurgerMenuVisible).toBe(true);
         const isLogoutLinkVisible = await productPage.isLogoutLinkVisible();
@@ -34,14 +26,12 @@ test.describe('SauceDemo Products Tests', () => {
         await expect(page).toHaveURL('https://www.saucedemo.com/');
     });
 
-    test('Products page displays correct number of products', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('Products page displays correct number of products', async ({ authenticatedPage, productPage, page }) => {
         const productCount = await productPage.getProductCount();
         expect(productCount).toBe(6);
     });
 
-    test('Product can add to the cart', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('Product can add to the cart', async ({ authenticatedPage, productPage, page }) => {
         await productPage.addProductToCartByName('Sauce Labs Backpack');
         const cartCount = await productPage.getCartItemCount();
         expect(cartCount).toBe('1');
@@ -50,8 +40,7 @@ test.describe('SauceDemo Products Tests', () => {
         expect(isInCart).toBe(true); 
     });
 
-    test('User can add multiple products to the cart', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('User can add multiple products to the cart', async ({ authenticatedPage, productPage, page }) => {
         await productPage.addProductToCartByName('Sauce Labs Backpack');
         await productPage.addProductToCartByName('Sauce Labs Bike Light');
         await productPage.addProductToCartByName('Sauce Labs Bolt T-Shirt');
@@ -59,36 +48,32 @@ test.describe('SauceDemo Products Tests', () => {
         expect(cartCount).toBe('3');
     });
 
-    test('User can remove product from the cart', async ({ page }) => {
-        const productPage = new ProductPage(page);
+    test('User can remove product from the cart', async ({ authenticatedPage, productPage, page }) => {
         await productPage.addProductToCartByName('Sauce Labs Backpack');
         await productPage.removeProductFromCartByName('Sauce Labs Backpack');
         const cartCount = await productPage.getCartItemCount();
         expect(cartCount).toBe('0');
     });
-    test('can sort products by name A-Z', async ({ page }) => {
-        const productsPage = new ProductPage(page);        
-        await productsPage.sortBy(SortOption.NAME_ASC);
-        const productNames = await productsPage.getProductNames();
+    test('can sort products by name A-Z', async ({ authenticatedPage, productPage, page }) => {        
+        await productPage.sortBy(SortOption.NAME_ASC);
+        const productNames = await productPage.getProductNames();
         expect(productNames[0]).toBe('Sauce Labs Backpack');
     });
-    test(' can sort products by name Z-A', async ({ page }) => {
-        const productsPage = new ProductPage(page);
-        await productsPage.sortBy(SortOption.NAME_DESC);
-        const productNames = await productsPage.getProductNames();
+    test(' can sort products by name Z-A', async ({ authenticatedPage, productPage, page }) => {
+        await productPage.sortBy(SortOption.NAME_DESC);
+        const productNames = await productPage.getProductNames();
         expect(productNames[0]).toBe('Test.allTheThings() T-Shirt (Red)');
     });
         
-    test('can sort products by price low to high', async ({ page }) => {    
-        const productsPage = new ProductPage(page);
-        await productsPage.sortBy(SortOption.PRICE_LOW_HIGH);
-        const firstProductPrice = await productsPage.getProductPrice('Sauce Labs Onesie');
+    test('can sort products by price low to high', async ({ authenticatedPage, productPage, page }) => {    
+        await productPage.sortBy(SortOption.PRICE_LOW_HIGH);
+        const firstProductPrice = await productPage.getProductPrice('Sauce Labs Onesie');
         expect(firstProductPrice).toContain('$7.99');
         //check all the products are sorted correctly
-        const productNames = await productsPage.getProductNames();
+        const productNames = await productPage.getProductNames();
         const prices: number[] = [];
         for (const name of productNames){
-            const priceText = await productsPage.getProductPrice(name);
+            const priceText = await productPage.getProductPrice(name);
             const price = parseFloat(priceText.replace('$', ''));
             prices.push(price);
         }
@@ -96,16 +81,16 @@ test.describe('SauceDemo Products Tests', () => {
         expect(prices).toEqual(sortedPrices);
     });
 
-    test('can sort products by price high to low', async ({ page }) => {    
-        const productsPage = new ProductPage(page);
-        await productsPage.sortBy(SortOption.PRICE_HIGH_LOW);
-        const firstProductPrice = await productsPage.getProductPrice('Sauce Labs Fleece Jacket');
+    test('can sort products by price high to low', async ({ authenticatedPage, productPage, page }) => {    
+
+        await productPage.sortBy(SortOption.PRICE_HIGH_LOW);
+        const firstProductPrice = await productPage.getProductPrice('Sauce Labs Fleece Jacket');
         expect(firstProductPrice).toContain('$49.99');
 
-        const productNames = await productsPage.getProductNames();
+        const productNames = await productPage.getProductNames();
         const prices: number[] = [];
         for (const name of productNames){
-            const priceText = await productsPage.getProductPrice(name);
+            const priceText = await productPage.getProductPrice(name);
             const price = parseFloat(priceText.replace('$', ''));
             prices.push(price);
         }

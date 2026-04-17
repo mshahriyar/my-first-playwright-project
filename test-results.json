@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 6
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 6
         },
         "id": "chromium",
         "name": "chromium",
@@ -69,16 +69,492 @@
   },
   "suites": [
     {
-      "title": "saucedemo/checkout_with_faker.spec.ts",
-      "file": "saucedemo/checkout_with_faker.spec.ts",
+      "title": "api/fakestoreapi.spec.ts",
+      "file": "api/fakestoreapi.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FakeStoreAPI Tests",
+          "file": "api/fakestoreapi.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /products - should return a list of products",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 952,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.235Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-7b352551a8c585879c7e",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 6,
+              "column": 9
+            },
+            {
+              "title": "GET - Fetch single product ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 955,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.237Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-4542cf6eed48e2f9ab0c",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "GET - Fetch All Categories ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 961,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.236Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-ad3fac695b3d245aad14",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "GET - Fetch Products by Category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 959,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.237Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-5f0eb26cff268eda456b",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "POST - Create a new product",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1703,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.238Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-1818469e5d94d26c7990",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 44,
+              "column": 9
+            },
+            {
+              "title": "Get - Fetch user cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1824,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:41.235Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-c4880099da11f69b8322",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 62,
+              "column": 9
+            },
+            {
+              "title": "POST - User login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 311,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0d5dd9e117172cdb7551-bae999b27395cd6d79d9",
+              "file": "api/fakestoreapi.spec.ts",
+              "line": 71,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/jsonplaceholder.spec.ts",
+      "file": "api/jsonplaceholder.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "JSONPlaceholder API Tests",
+          "file": "api/jsonplaceholder.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /posts - should return a list of posts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 542,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.226Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-1f8bc467e1d40f8c9bb4",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "GET - Fetch single post",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 460,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.232Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-90c2e3f435896ff9ecdf",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "POST - Create a new post",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 683,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.232Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-2624204eb165beb2d152",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 29,
+              "column": 9
+            },
+            {
+              "title": "PUT - Update an existing post",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1032,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.548Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-a95a7f055e496b93cdc1",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 44,
+              "column": 9
+            },
+            {
+              "title": "DELETE - Delete a post",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 346,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.749Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-7e835ed9b1829762b1a8",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 60,
+              "column": 9
+            },
+            {
+              "title": "GET - Fetch post for specific user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 167,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.778Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8b9d5681d708c0ef901-3b1bd16b6c510947a9eb",
+              "file": "api/jsonplaceholder.spec.ts",
+              "line": 66,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/e2e/checkout_with_faker.spec.ts",
+      "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Checkout Tests with Faker",
-          "file": "saucedemo/checkout_with_faker.spec.ts",
-          "line": 11,
+          "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
+          "line": 7,
           "column": 6,
           "specs": [
             {
@@ -97,12 +573,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1297,
+                      "duration": 1992,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-15T12:40:15.021Z",
+                      "startTime": "2026-04-17T11:06:43.259Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -110,9 +586,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "bf0b791979a63533b8f3-6af0ee2dfe551ae5c738",
-              "file": "saucedemo/checkout_with_faker.spec.ts",
-              "line": 12,
+              "id": "3609d725e4c2b4873ee1-9ecfcbc94091c050c121",
+              "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
+              "line": 8,
               "column": 9
             },
             {
@@ -131,28 +607,28 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2052,
+                      "duration": 3515,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
+                          "text": "Test 1: Kenyon Mosciski, Postal Code: 40998-1005\n"
                         },
                         {
-                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
+                          "text": "Test 2: Marley Kihn, Postal Code: 75364-3010\n"
                         },
                         {
-                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
+                          "text": "Test 3: Oliver Ernser-Schumm, Postal Code: 71817\n"
                         },
                         {
-                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
+                          "text": "Test 4: Emily King, Postal Code: 28707\n"
                         },
                         {
-                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
+                          "text": "Test 5: Pearl Veum, Postal Code: 39928-7328\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-15T12:40:15.021Z",
+                      "startTime": "2026-04-17T11:06:43.264Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -160,9 +636,1243 @@
                   "status": "expected"
                 }
               ],
-              "id": "bf0b791979a63533b8f3-439907fd9a41f7aeb7c7",
-              "file": "saucedemo/checkout_with_faker.spec.ts",
+              "id": "3609d725e4c2b4873ee1-46c636e03a012fbd0517",
+              "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
+              "line": 33,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/e2e/login_with_array.spec.ts",
+      "file": "saucedemo/e2e/login_with_array.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo Login Tests with Multiple Users",
+          "file": "saucedemo/e2e/login_with_array.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login test for standard_user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2090,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:42.969Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ca18401e6a1de354683-59941e537f158393ff89",
+              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "line": 17,
+              "column": 13
+            },
+            {
+              "title": "login test for locked_out_user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:43.090Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ca18401e6a1de354683-5f501941a76094a11eda",
+              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "line": 17,
+              "column": 13
+            },
+            {
+              "title": "login test for problem_user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1940,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:43.112Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ca18401e6a1de354683-66a1111f464c2ebebe85",
+              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "line": 17,
+              "column": 13
+            },
+            {
+              "title": "login test for invalid_user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1392,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:43.597Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1ca18401e6a1de354683-4bca9aa270f479f7e0c3",
+              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "line": 17,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/e2e/login_with_json_data.spec.ts",
+      "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo Login Tests with JSON Data",
+          "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "verify product Sauce Labs Backpack is displayed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1645,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:45.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "52154f08c4069a82a40b-c6a23f233c73c64ffc93",
+              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+              "line": 11,
+              "column": 13
+            },
+            {
+              "title": "verify product Sauce Labs Bike Light is displayed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1675,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:45.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "52154f08c4069a82a40b-0fd2895a6343b7f5755e",
+              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+              "line": 11,
+              "column": 13
+            },
+            {
+              "title": "verify product Sauce Labs Bolt T-Shirt is displayed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1682,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:45.353Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "52154f08c4069a82a40b-0fa3b1d308677a0ed012",
+              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+              "line": 11,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/regression/cart.spec.ts",
+      "file": "saucedemo/regression/cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart Item Display Details",
+          "file": "saucedemo/regression/cart.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display correct quantity for each cart item",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1707,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:45.393Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8ac7afa0dc3ba6975a4-07c507c489702b10d2bc",
+              "file": "saucedemo/regression/cart.spec.ts",
+              "line": 9,
+              "column": 9
+            },
+            {
+              "title": "should display product descriptions in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1549,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:45.574Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8ac7afa0dc3ba6975a4-33754f71daeb19e50271",
+              "file": "saucedemo/regression/cart.spec.ts",
+              "line": 26,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/regression/checkout.spec.ts",
+      "file": "saucedemo/regression/checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo End-to-End Checkout Tests",
+          "file": "saucedemo/regression/checkout.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User can checkout with multiple products and validate total price @e2e @regression",
+              "ok": true,
+              "tags": [
+                "e2e",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1925,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[checkout-multiple] subtotal=Item total: $39.98 tax=Tax: $3.20 total=Total: $43.18\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:47.044Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fd944dd2375946e9ca1-bdb6afd8aed84ebcc503",
+              "file": "saucedemo/regression/checkout.spec.ts",
+              "line": 11,
+              "column": 9
+            },
+            {
+              "title": "checkout with single product @visual @critical",
+              "ok": true,
+              "tags": [
+                "visual",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1806,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[checkout-single] subtotal=Item total: $49.99 tax=Tax: $4.00 total=Total: $53.99\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:47.070Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fd944dd2375946e9ca1-05517d225f036248d76e",
+              "file": "saucedemo/regression/checkout.spec.ts",
+              "line": 76,
+              "column": 9
+            },
+            {
+              "title": "Cannot checkout with empty cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1508,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:47.096Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fd944dd2375946e9ca1-e5bdf2b67f7aa4ee4838",
+              "file": "saucedemo/regression/checkout.spec.ts",
+              "line": 132,
+              "column": 9
+            },
+            {
+              "title": "Quick checkout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1792,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:47.139Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fd944dd2375946e9ca1-87ee10327f9935fbabcc",
+              "file": "saucedemo/regression/checkout.spec.ts",
+              "line": 145,
+              "column": 9
+            },
+            {
+              "title": "complete checkout flow with steps",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1781,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Login",
+                          "duration": 97
+                        },
+                        {
+                          "title": "Add products to card",
+                          "duration": 94
+                        },
+                        {
+                          "title": "Navigate to cart",
+                          "duration": 49
+                        },
+                        {
+                          "title": "Verify cart contents",
+                          "duration": 4
+                        },
+                        {
+                          "title": "Complete checkout",
+                          "duration": 155
+                        },
+                        {
+                          "title": "Verify order completeion",
+                          "duration": 18
+                        }
+                      ],
+                      "startTime": "2026-04-17T11:06:47.165Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4fd944dd2375946e9ca1-0828557a697ed6b7f2bf",
+              "file": "saucedemo/regression/checkout.spec.ts",
+              "line": 164,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/smoke/login.spec.ts",
+      "file": "saucedemo/smoke/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo Login Tests",
+          "file": "saucedemo/smoke/login.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "user can successfully login with standard user @smoke @critical @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1379,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:47.184Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-027de222f94436f34ef1",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "user cannot login with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 939,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.605Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-def6acc91fed23521088",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "user cannot login with empty credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1028,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.636Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-b07fa0908b6ea16a55c4",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "user cannot login with empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1058,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.925Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-debdecdc33185718c346",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "user cannot login with empty username",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1064,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.986Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-5b6c78cfdc8542e1104c",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "login fails with locked out user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1082,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.990Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-e5490681ee437dbd5469",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 42,
+              "column": 9
+            },
+            {
+              "title": "can clear error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1077,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:48.996Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "01dde81bb25d2b15d698-d03250965ece1dda6d91",
+              "file": "saucedemo/smoke/login.spec.ts",
+              "line": 49,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/smoke/product.spec.ts",
+      "file": "saucedemo/smoke/product.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo Products Tests",
+          "file": "saucedemo/smoke/product.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Products page displays correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1411,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:49.568Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-aa58610301cd6db19f6f",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 10,
+              "column": 9
+            },
+            {
+              "title": "Burge Menu is visible and functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1505,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:49.719Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-3f18dc3eb8d5c01d919c",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "User can logout using burger menu",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 2585,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:50.015Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-709b758b33b27aa13893",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "Products page displays correct number of products",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1233,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:50.069Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-5401decb69e6ef4615c1",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 29,
+              "column": 9
+            },
+            {
+              "title": "Product can add to the cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1343,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:50.092Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-d6cf0e97f86c2facfe04",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 34,
+              "column": 9
+            },
+            {
+              "title": "User can add multiple products to the cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1302,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:50.092Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-b730865fcc66c4e1cf83",
+              "file": "saucedemo/smoke/product.spec.ts",
               "line": 43,
+              "column": 9
+            },
+            {
+              "title": "User can remove product from the cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 1554,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:51.013Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-47111dadb734157825b6",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 51,
+              "column": 9
+            },
+            {
+              "title": "can sort products by name A-Z",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:51.266Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-8a1630d5af05136e0b53",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 57,
+              "column": 9
+            },
+            {
+              "title": " can sort products by name Z-A",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1351,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:51.329Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-fb14648745c1cb5310d6",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 62,
+              "column": 9
+            },
+            {
+              "title": "can sort products by price low to high",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1266,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:51.414Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-16ceb733e92bb7d26a74",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 68,
+              "column": 9
+            },
+            {
+              "title": "can sort products by price high to low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1193,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-17T11:06:51.505Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e79e49d06c8e2e1d64f-a012c2a50398f33d06f5",
+              "file": "saucedemo/smoke/product.spec.ts",
+              "line": 84,
               "column": 9
             }
           ]
@@ -172,9 +1882,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-15T12:40:14.089Z",
-    "duration": 3315.566,
-    "expected": 2,
+    "startTime": "2026-04-17T11:06:39.710Z",
+    "duration": 13182.443000000001,
+    "expected": 47,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
