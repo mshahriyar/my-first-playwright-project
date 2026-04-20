@@ -33,7 +33,6 @@ export default defineConfig({
   ['list'],
 
   ['json', { outputFile: 'test-results.json' }],
-  ['junit', { outputFile: 'results.xml' }],
   ],
 // Global test timeout
 
@@ -71,10 +70,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
     // {
     //   name: 'webkit',
