@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/playwright.config.ts",
-    "rootDir": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/tests",
+    "configFile": "/Users/shahriyar/Desktop/my-first-playwright-project/playwright.config.ts",
+    "rootDir": "/Users/shahriyar/Desktop/my-first-playwright-project/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/test-results",
+        "outputDir": "/Users/shahriyar/Desktop/my-first-playwright-project/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,23 +24,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 6
-        },
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "/Users/muhammadshahriyar/Desktop/my-first-playwright-project/tests",
+        "testDir": "/Users/shahriyar/Desktop/my-first-playwright-project/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -63,276 +47,28 @@
         {
           "outputFile": "test-results.json"
         }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
       ]
     ],
     "reportSlowTests": {
       "max": 5,
       "threshold": 300000
     },
+    "runAgents": "none",
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.59.1",
+    "version": "1.58.2",
     "workers": 6,
     "webServer": null
   },
   "suites": [
-    {
-      "title": "api/fakestoreapi.spec.ts",
-      "file": "api/fakestoreapi.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "FakeStoreAPI Tests",
-          "file": "api/fakestoreapi.spec.ts",
-          "line": 22,
-          "column": 6,
-          "specs": [
-            {
-              "title": "GET /products - should return a list of products",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 660,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.118Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-1bad52e3b32a9016a505",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 28,
-              "column": 9
-            },
-            {
-              "title": "GET - Fetch single product ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1429,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.119Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-183138c27d2dea9d0a5c",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 38,
-              "column": 9
-            },
-            {
-              "title": "GET - Fetch All Categories ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 633,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.120Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-df1585904132e8215b9b",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 47,
-              "column": 9
-            },
-            {
-              "title": "GET - Fetch Products by Category",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 1397,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.119Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-65ec5f3e99abac0454ca",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 55,
-              "column": 9
-            },
-            {
-              "title": "POST - Create a new product",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 659,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.120Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-8d74fe66b5ec5138c960",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 66,
-              "column": 9
-            },
-            {
-              "title": "Get - Fetch user cart",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 1480,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.119Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-ff15812d0b3e44b3c081",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 88,
-              "column": 9
-            },
-            {
-              "title": "POST - User login",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 299,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.769Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0d5dd9e117172cdb7551-322e543e0d1dac316ad0",
-              "file": "api/fakestoreapi.spec.ts",
-              "line": 97,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
     {
       "title": "api/jsonplaceholder.spec.ts",
       "file": "api/jsonplaceholder.spec.ts",
@@ -341,13 +77,13 @@
       "specs": [],
       "suites": [
         {
-          "title": "JSONPlaceholder API Tests",
+          "title": " JSONPlaceholder API Tests",
           "file": "api/jsonplaceholder.spec.ts",
-          "line": 6,
+          "line": 5,
           "column": 6,
           "specs": [
             {
-              "title": "GET /posts - should return a list of posts",
+              "title": "Get- Fetch all posts",
               "ok": true,
               "tags": [],
               "tests": [
@@ -355,19 +91,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 709,
+                      "duration": 438,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.796Z",
+                      "startTime": "2026-04-30T17:53:03.155Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -375,13 +111,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "f8b9d5681d708c0ef901-8fe0ff052cefea7d810a",
+              "id": "f8b9d5681d708c0ef901-3f45d9dc8a87a3ed7e5a",
               "file": "api/jsonplaceholder.spec.ts",
-              "line": 8,
+              "line": 6,
               "column": 9
             },
             {
-              "title": "GET - Fetch single post",
+              "title": "Get - Fetch single post",
               "ok": true,
               "tags": [],
               "tests": [
@@ -389,19 +125,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 703,
+                      "duration": 374,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:07.796Z",
+                      "startTime": "2026-04-30T17:53:03.153Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -409,13 +145,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "f8b9d5681d708c0ef901-d501a45b0473ffea8fb2",
+              "id": "f8b9d5681d708c0ef901-9b8da56a3bd666130c26",
               "file": "api/jsonplaceholder.spec.ts",
-              "line": 19,
+              "line": 17,
               "column": 9
             },
             {
-              "title": "POST - Create a new post",
+              "title": "Post - Create a new post",
               "ok": true,
               "tags": [],
               "tests": [
@@ -423,19 +159,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1024,
+                      "duration": 660,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.076Z",
+                      "startTime": "2026-04-30T17:53:03.166Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -443,9 +179,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "f8b9d5681d708c0ef901-9cc2283ed0eb8aad2ef7",
+              "id": "f8b9d5681d708c0ef901-cc6343e4adc0ebdaf6f5",
               "file": "api/jsonplaceholder.spec.ts",
-              "line": 29,
+              "line": 28,
               "column": 9
             },
             {
@@ -457,19 +193,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 737,
+                      "duration": 669,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.506Z",
+                      "startTime": "2026-04-30T17:53:03.167Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -477,7 +213,7 @@
                   "status": "expected"
                 }
               ],
-              "id": "f8b9d5681d708c0ef901-c5e59a9337b84fddb672",
+              "id": "f8b9d5681d708c0ef901-ec2143471ce45bcdcdf2",
               "file": "api/jsonplaceholder.spec.ts",
               "line": 44,
               "column": 9
@@ -491,19 +227,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 214,
+                      "duration": 1111,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.512Z",
+                      "startTime": "2026-04-30T17:53:03.155Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -511,43 +247,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "f8b9d5681d708c0ef901-580dd5b8b5146b61ec65",
+              "id": "f8b9d5681d708c0ef901-45e3ae0c05294c48554a",
               "file": "api/jsonplaceholder.spec.ts",
-              "line": 60,
-              "column": 9
-            },
-            {
-              "title": "GET - Fetch post for specific user",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 382,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.538Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f8b9d5681d708c0ef901-92f2698326ae3eaa416e",
-              "file": "api/jsonplaceholder.spec.ts",
-              "line": 66,
+              "line": 61,
               "column": 9
             }
           ]
@@ -555,16 +257,101 @@
       ]
     },
     {
-      "title": "saucedemo/e2e/checkout_with_faker.spec.ts",
-      "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
+      "title": "saucedemo/cart.spec.ts",
+      "file": "saucedemo/cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart Item Display Details",
+          "file": "saucedemo/cart.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display correct quantity for each cart item",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 1556,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:03.170Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d93e58445b67c7b855ba-c442f394ad46cb2978d9",
+              "file": "saucedemo/cart.spec.ts",
+              "line": 18,
+              "column": 9
+            },
+            {
+              "title": "should display product descriptions in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1525,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:03.541Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d93e58445b67c7b855ba-54929c9fa48db9618baf",
+              "file": "saucedemo/cart.spec.ts",
+              "line": 35,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/checkout_with_faker.spec.ts",
+      "file": "saucedemo/checkout_with_faker.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Checkout Tests with Faker",
-          "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
-          "line": 7,
+          "file": "saucedemo/checkout_with_faker.spec.ts",
+          "line": 11,
           "column": 6,
           "specs": [
             {
@@ -576,19 +363,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2951,
+                      "duration": 1203,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.744Z",
+                      "startTime": "2026-04-30T17:53:03.689Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -596,9 +383,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "3609d725e4c2b4873ee1-751b96af5f6ab70f6daf",
-              "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
-              "line": 8,
+              "id": "bf0b791979a63533b8f3-6af0ee2dfe551ae5c738",
+              "file": "saucedemo/checkout_with_faker.spec.ts",
+              "line": 12,
               "column": 9
             },
             {
@@ -610,35 +397,35 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5077,
+                      "duration": 1595,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Test 1: Destiney Beahan, Postal Code: 60645-6997\n"
+                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
                         },
                         {
-                          "text": "Test 2: Darren West, Postal Code: 70708\n"
+                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
                         },
                         {
-                          "text": "Test 3: Litzy Leuschke, Postal Code: 93115\n"
+                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
                         },
                         {
-                          "text": "Test 4: Blake Lang, Postal Code: 81746\n"
+                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
                         },
                         {
-                          "text": "Test 5: Leonard Okuneva, Postal Code: 96079\n"
+                          "text": "Test ${i+1}: ${userData.firstName} ${userData.lastName}, Postal Code: ${userData.postalCode}\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.785Z",
+                      "startTime": "2026-04-30T17:53:03.928Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -646,9 +433,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "3609d725e4c2b4873ee1-7afb83bb4b0f1b9b5c68",
-              "file": "saucedemo/e2e/checkout_with_faker.spec.ts",
-              "line": 33,
+              "id": "bf0b791979a63533b8f3-439907fd9a41f7aeb7c7",
+              "file": "saucedemo/checkout_with_faker.spec.ts",
+              "line": 43,
               "column": 9
             }
           ]
@@ -656,15 +443,176 @@
       ]
     },
     {
-      "title": "saucedemo/e2e/login_with_array.spec.ts",
-      "file": "saucedemo/e2e/login_with_array.spec.ts",
+      "title": "saucedemo/checkout.spec.ts",
+      "file": "saucedemo/checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo End-to-End Checkout Tests",
+          "file": "saucedemo/checkout.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User can checkout with multiple products and validate total price",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 964,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[checkout-multiple] subtotal=Item total: $39.98 tax=Tax: $3.20 total=Total: $43.18\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:03.852Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ed12acc0108d051d6837-b0f612746bae863e16a4",
+              "file": "saucedemo/checkout.spec.ts",
+              "line": 12,
+              "column": 9
+            },
+            {
+              "title": "checkout with single product",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 944,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[checkout-single] subtotal=Item total: $49.99 tax=Tax: $4.00 total=Total: $53.99\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:04.285Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ed12acc0108d051d6837-306529acd9cb97534858",
+              "file": "saucedemo/checkout.spec.ts",
+              "line": 81,
+              "column": 9
+            },
+            {
+              "title": "Cannot checkout with empty cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 862,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:07.414Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ed12acc0108d051d6837-196841a0590c72bdcc11",
+              "file": "saucedemo/checkout.spec.ts",
+              "line": 141,
+              "column": 9
+            },
+            {
+              "title": "Quick checkout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 920,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T17:53:07.442Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ed12acc0108d051d6837-c5b65b2580186fc21e0c",
+              "file": "saucedemo/checkout.spec.ts",
+              "line": 158,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "saucedemo/login_with_array.spec.ts",
+      "file": "saucedemo/login_with_array.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Login Tests with Multiple Users",
-          "file": "saucedemo/e2e/login_with_array.spec.ts",
+          "file": "saucedemo/login_with_array.spec.ts",
           "line": 15,
           "column": 6,
           "specs": [
@@ -677,19 +625,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2429,
+                      "duration": 824,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.747Z",
+                      "startTime": "2026-04-30T17:53:07.474Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -697,8 +645,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "1ca18401e6a1de354683-4eb4526dbd0f12226bf6",
-              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "id": "d0985352a80e8be102f2-93a46a6168c37f6818c5",
+              "file": "saucedemo/login_with_array.spec.ts",
               "line": 17,
               "column": 13
             },
@@ -711,19 +659,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2908,
+                      "duration": 788,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:08.933Z",
+                      "startTime": "2026-04-30T17:53:07.491Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -731,8 +679,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "1ca18401e6a1de354683-c06f68de92a896fbe8f7",
-              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "id": "d0985352a80e8be102f2-3333f17b10b7104d8aeb",
+              "file": "saucedemo/login_with_array.spec.ts",
               "line": 17,
               "column": 13
             },
@@ -745,19 +693,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2223,
+                      "duration": 784,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:09.106Z",
+                      "startTime": "2026-04-30T17:53:08.003Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -765,8 +713,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "1ca18401e6a1de354683-73783ed9d95f6ff615f4",
-              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "id": "d0985352a80e8be102f2-206faa7fe43cb2032cd3",
+              "file": "saucedemo/login_with_array.spec.ts",
               "line": 17,
               "column": 13
             },
@@ -779,19 +727,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3182,
+                      "duration": 899,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:09.251Z",
+                      "startTime": "2026-04-30T17:53:08.285Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -799,8 +747,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "1ca18401e6a1de354683-360ee94ce1695b71baf3",
-              "file": "saucedemo/e2e/login_with_array.spec.ts",
+              "id": "d0985352a80e8be102f2-b311b75632064f016d92",
+              "file": "saucedemo/login_with_array.spec.ts",
               "line": 17,
               "column": 13
             }
@@ -809,16 +757,16 @@
       ]
     },
     {
-      "title": "saucedemo/e2e/login_with_json_data.spec.ts",
-      "file": "saucedemo/e2e/login_with_json_data.spec.ts",
+      "title": "saucedemo/login_with_json_data.spec.ts",
+      "file": "saucedemo/login_with_json_data.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Login Tests with JSON Data",
-          "file": "saucedemo/e2e/login_with_json_data.spec.ts",
-          "line": 6,
+          "file": "saucedemo/login_with_json_data.spec.ts",
+          "line": 8,
           "column": 6,
           "specs": [
             {
@@ -830,19 +778,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2040,
+                      "duration": 981,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:15.424Z",
+                      "startTime": "2026-04-30T17:53:08.287Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -850,9 +798,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "52154f08c4069a82a40b-49bcb766ed5c566e5ad0",
-              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
-              "line": 11,
+              "id": "4534119015ad36cd8f2b-109309df498c96cbc831",
+              "file": "saucedemo/login_with_json_data.spec.ts",
+              "line": 15,
               "column": 13
             },
             {
@@ -864,19 +812,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1747,
+                      "duration": 901,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:16.523Z",
+                      "startTime": "2026-04-30T17:53:08.310Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -884,9 +832,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "52154f08c4069a82a40b-9dc2358b1ef29ca439e1",
-              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
-              "line": 11,
+              "id": "4534119015ad36cd8f2b-a84c94a2706897ecd48b",
+              "file": "saucedemo/login_with_json_data.spec.ts",
+              "line": 15,
               "column": 13
             },
             {
@@ -898,19 +846,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1704,
+                      "duration": 877,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:16.552Z",
+                      "startTime": "2026-04-30T17:53:08.371Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -918,9 +866,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "52154f08c4069a82a40b-b8a55edc915cdd8d9ed5",
-              "file": "saucedemo/e2e/login_with_json_data.spec.ts",
-              "line": 11,
+              "id": "4534119015ad36cd8f2b-24c85d81a393eba40889",
+              "file": "saucedemo/login_with_json_data.spec.ts",
+              "line": 15,
               "column": 13
             }
           ]
@@ -928,356 +876,40 @@
       ]
     },
     {
-      "title": "saucedemo/regression/cart.spec.ts",
-      "file": "saucedemo/regression/cart.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Cart Item Display Details",
-          "file": "saucedemo/regression/cart.spec.ts",
-          "line": 5,
-          "column": 6,
-          "specs": [
-            {
-              "title": "should display correct quantity for each cart item",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 1956,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:17.658Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a8ac7afa0dc3ba6975a4-321ecf0d32ae2254dc38",
-              "file": "saucedemo/regression/cart.spec.ts",
-              "line": 9,
-              "column": 9
-            },
-            {
-              "title": "should display product descriptions in cart",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1899,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:18.269Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a8ac7afa0dc3ba6975a4-bfc645facb9854aca2be",
-              "file": "saucedemo/regression/cart.spec.ts",
-              "line": 26,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "saucedemo/regression/checkout.spec.ts",
-      "file": "saucedemo/regression/checkout.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "SauceDemo End-to-End Checkout Tests",
-          "file": "saucedemo/regression/checkout.spec.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [
-            {
-              "title": "User can checkout with multiple products and validate total price @e2e @regression",
-              "ok": true,
-              "tags": [
-                "e2e",
-                "regression"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1897,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[checkout-multiple] subtotal=Item total: $39.98 tax=Tax: $3.20 total=Total: $43.18\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:18.337Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4fd944dd2375946e9ca1-554dc7c8d3e34148ab5a",
-              "file": "saucedemo/regression/checkout.spec.ts",
-              "line": 11,
-              "column": 9
-            },
-            {
-              "title": "checkout with single product @visual @critical",
-              "ok": true,
-              "tags": [
-                "visual",
-                "critical"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 2060,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[checkout-single] subtotal=Item total: $49.99 tax=Tax: $4.00 total=Total: $53.99\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:18.359Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4fd944dd2375946e9ca1-d3f3baff8ec5d851cf69",
-              "file": "saucedemo/regression/checkout.spec.ts",
-              "line": 76,
-              "column": 9
-            },
-            {
-              "title": "Cannot checkout with empty cart",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 1735,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:19.434Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4fd944dd2375946e9ca1-31dc6af63a80a29506bc",
-              "file": "saucedemo/regression/checkout.spec.ts",
-              "line": 132,
-              "column": 9
-            },
-            {
-              "title": "Quick checkout",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 2147,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-04-17T13:14:19.628Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4fd944dd2375946e9ca1-bc8b56fdd273cc579934",
-              "file": "saucedemo/regression/checkout.spec.ts",
-              "line": 145,
-              "column": 9
-            },
-            {
-              "title": "complete checkout flow with steps",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 2192,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Login",
-                          "duration": 311
-                        },
-                        {
-                          "title": "Add products to card",
-                          "duration": 98
-                        },
-                        {
-                          "title": "Navigate to cart",
-                          "duration": 61
-                        },
-                        {
-                          "title": "Verify cart contents",
-                          "duration": 6
-                        },
-                        {
-                          "title": "Complete checkout",
-                          "duration": 199
-                        },
-                        {
-                          "title": "Verify order completeion",
-                          "duration": 6
-                        }
-                      ],
-                      "startTime": "2026-04-17T13:14:19.894Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4fd944dd2375946e9ca1-16a57a630a59e88c05b6",
-              "file": "saucedemo/regression/checkout.spec.ts",
-              "line": 164,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "saucedemo/smoke/login.spec.ts",
-      "file": "saucedemo/smoke/login.spec.ts",
+      "title": "saucedemo/login.spec.ts",
+      "file": "saucedemo/login.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Login Tests",
-          "file": "saucedemo/smoke/login.spec.ts",
+          "file": "saucedemo/login.spec.ts",
           "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "user can successfully login with standard user @smoke @critical @regression",
+              "title": "user can successfully login with standard user",
               "ok": true,
-              "tags": [
-                "smoke",
-                "critical",
-                "regression"
-              ],
+              "tags": [],
               "tests": [
                 {
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1037,
+                      "duration": 827,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:20.205Z",
+                      "startTime": "2026-04-30T17:53:08.408Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1285,8 +917,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-b958e4b9fd4597b71c1e",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-de91231b285bbef2e0bf",
+              "file": "saucedemo/login.spec.ts",
               "line": 13,
               "column": 9
             },
@@ -1299,19 +931,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1093,
+                      "duration": 805,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:20.247Z",
+                      "startTime": "2026-04-30T17:53:08.799Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1319,8 +951,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-e4137cafc26e5ec30da4",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-4da80de607fb1eada6f3",
+              "file": "saucedemo/login.spec.ts",
               "line": 19,
               "column": 9
             },
@@ -1333,19 +965,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1343,
+                      "duration": 801,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:20.433Z",
+                      "startTime": "2026-04-30T17:53:09.195Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1353,8 +985,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-51013982920e5fee9005",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-a097de4eaac2b7191f2d",
+              "file": "saucedemo/login.spec.ts",
               "line": 25,
               "column": 9
             },
@@ -1367,19 +999,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1320,
+                      "duration": 768,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:21.209Z",
+                      "startTime": "2026-04-30T17:53:09.224Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1387,8 +1019,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-f8ed30f0cc8033ab955f",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-bf051b4ae1b6f5133554",
+              "file": "saucedemo/login.spec.ts",
               "line": 31,
               "column": 9
             },
@@ -1401,19 +1033,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1260,
+                      "duration": 754,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:21.248Z",
+                      "startTime": "2026-04-30T17:53:09.246Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1421,8 +1053,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-d96cd9379a69e09798f6",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-2a75cbbb6ea40eef6aaa",
+              "file": "saucedemo/login.spec.ts",
               "line": 37,
               "column": 9
             },
@@ -1435,19 +1067,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1734,
+                      "duration": 737,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:21.352Z",
+                      "startTime": "2026-04-30T17:53:09.257Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1455,8 +1087,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-66194e8a00276f8b4826",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-d467ca24649c6424b5b5",
+              "file": "saucedemo/login.spec.ts",
               "line": 42,
               "column": 9
             },
@@ -1469,19 +1101,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 996,
+                      "duration": 892,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:21.782Z",
+                      "startTime": "2026-04-30T17:53:09.280Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1489,8 +1121,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "01dde81bb25d2b15d698-dbdabe848bd19fd459b7",
-              "file": "saucedemo/smoke/login.spec.ts",
+              "id": "87a74ef46e8bd881bda8-bb34d43bce436dd7918b",
+              "file": "saucedemo/login.spec.ts",
               "line": 49,
               "column": 9
             }
@@ -1499,15 +1131,15 @@
       ]
     },
     {
-      "title": "saucedemo/smoke/product.spec.ts",
-      "file": "saucedemo/smoke/product.spec.ts",
+      "title": "saucedemo/product.spec.ts",
+      "file": "saucedemo/product.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "SauceDemo Products Tests",
-          "file": "saucedemo/smoke/product.spec.ts",
+          "file": "saucedemo/product.spec.ts",
           "line": 8,
           "column": 6,
           "specs": [
@@ -1520,19 +1152,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3055,
+                      "duration": 745,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:21.886Z",
+                      "startTime": "2026-04-30T17:53:09.616Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1540,9 +1172,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-17e9d166e16ba3a14cfc",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 10,
+              "id": "90e70ccaede511eee8ad-f52ab1cc3b72769dc43d",
+              "file": "saucedemo/product.spec.ts",
+              "line": 17,
               "column": 9
             },
             {
@@ -1554,19 +1186,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1183,
+                      "duration": 747,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:22.114Z",
+                      "startTime": "2026-04-30T17:53:10.003Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1574,9 +1206,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-09e796d89c81ce2bccd7",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 13,
+              "id": "90e70ccaede511eee8ad-09ebbfd1771c6ce3067a",
+              "file": "saucedemo/product.spec.ts",
+              "line": 20,
               "column": 9
             },
             {
@@ -1588,19 +1220,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3179,
+                      "duration": 1711,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:22.517Z",
+                      "startTime": "2026-04-30T17:53:10.004Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1608,9 +1240,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-6d26c7aeb85f07f41b04",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 19,
+              "id": "90e70ccaede511eee8ad-1eb20ae38a14012e5b72",
+              "file": "saucedemo/product.spec.ts",
+              "line": 26,
               "column": 9
             },
             {
@@ -1622,19 +1254,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1019,
+                      "duration": 861,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:22.544Z",
+                      "startTime": "2026-04-30T17:53:10.010Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1642,9 +1274,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-c10965c00155e340d1e7",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 29,
+              "id": "90e70ccaede511eee8ad-6610e310d5365e295767",
+              "file": "saucedemo/product.spec.ts",
+              "line": 37,
               "column": 9
             },
             {
@@ -1656,19 +1288,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1393,
+                      "duration": 810,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:22.788Z",
+                      "startTime": "2026-04-30T17:53:10.011Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1676,9 +1308,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-8a2b2cc1949209cea161",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 34,
+              "id": "90e70ccaede511eee8ad-6111fbd3abd5145a94a1",
+              "file": "saucedemo/product.spec.ts",
+              "line": 43,
               "column": 9
             },
             {
@@ -1690,19 +1322,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2163,
+                      "duration": 808,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:23.116Z",
+                      "startTime": "2026-04-30T17:53:10.183Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1710,9 +1342,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-5c40aa36014e10fc1d72",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 43,
+              "id": "90e70ccaede511eee8ad-56717965a0a98a14e418",
+              "file": "saucedemo/product.spec.ts",
+              "line": 53,
               "column": 9
             },
             {
@@ -1724,19 +1356,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1557,
+                      "duration": 881,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:23.323Z",
+                      "startTime": "2026-04-30T17:53:10.368Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1744,9 +1376,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-b64ccc11fd118a714ed0",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 51,
+              "id": "90e70ccaede511eee8ad-8b24fcb85643f3973825",
+              "file": "saucedemo/product.spec.ts",
+              "line": 62,
               "column": 9
             },
             {
@@ -1758,19 +1390,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1409,
+                      "duration": 784,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:23.577Z",
+                      "startTime": "2026-04-30T17:53:10.757Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1778,9 +1410,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-7aeb2bcf5a8d5d2ce8c3",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 57,
+              "id": "90e70ccaede511eee8ad-c0bf8ce1d111a5e6ab2d",
+              "file": "saucedemo/product.spec.ts",
+              "line": 69,
               "column": 9
             },
             {
@@ -1792,19 +1424,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1564,
+                      "duration": 717,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:24.191Z",
+                      "startTime": "2026-04-30T17:53:10.828Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1812,9 +1444,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-a752602c22583092b73f",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 62,
+              "id": "90e70ccaede511eee8ad-eea064bcf9d901acf9ff",
+              "file": "saucedemo/product.spec.ts",
+              "line": 75,
               "column": 9
             },
             {
@@ -1826,19 +1458,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1260,
+                      "duration": 911,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:24.922Z",
+                      "startTime": "2026-04-30T17:53:10.880Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1846,9 +1478,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-39a3e9baf5c5dbb3606a",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 68,
+              "id": "90e70ccaede511eee8ad-c1edd055947349169489",
+              "file": "saucedemo/product.spec.ts",
+              "line": 82,
               "column": 9
             },
             {
@@ -1860,19 +1492,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1132,
+                      "duration": 797,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-17T13:14:24.949Z",
+                      "startTime": "2026-04-30T17:53:10.999Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1880,9 +1512,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e79e49d06c8e2e1d64f-e13069b5003ebeae9f8a",
-              "file": "saucedemo/smoke/product.spec.ts",
-              "line": 84,
+              "id": "90e70ccaede511eee8ad-76161196f9211c8363b4",
+              "file": "saucedemo/product.spec.ts",
+              "line": 99,
               "column": 9
             }
           ]
@@ -1892,9 +1524,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-17T13:14:06.263Z",
-    "duration": 24744.54,
-    "expected": 47,
+    "startTime": "2026-04-30T17:53:02.477Z",
+    "duration": 9355.252,
+    "expected": 38,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
