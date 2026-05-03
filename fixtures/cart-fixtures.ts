@@ -23,6 +23,7 @@ export const test = base.extend<CartFixtures>({
         await productPage.addProductToCartByName('Sauce Labs Bike Light')
         await productPage.goToCart();
         const cartPage = new CartPage(page)
+        await use(cartPage);
         
     }
 })
