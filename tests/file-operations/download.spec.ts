@@ -24,4 +24,35 @@ test.describe('File Download Tests', () => {
         //clean up
         fs.unlinkSync(downloadPath);
     });
+    test('download file and read content', async ({ page }) => {
+        await page.goto('https://the-internet.herokuapp.com/download');         
+        const downloadPromise = page.waitForEvent('download');
+        await page.locator('a[href*=".txt"]').first().click();
+        const download = await downloadPromise;
+        // Get download as stream
+        const stream = await download.createReadStream();
+        const chunks: Buffer[] = [];
+        for await (const chunk of stream) {
+        chunks.push(chunk);
+        }
+        const content = Buffer.concat(chunks).toString('utf-8');
+        console.log('File content: ', content);
+        expect(content.length).toBeGreaterThan(0);
+        });
+         
+    test('handle download failure', async ({ page }) => {
+        await page.goto('https://the-internet.herokuapp.com/download');
+        const downloadPromise = page.waitForEvent('download');
+        await page.locator('a[href*=".txt"]').first().click();
+        const download = await downloadPromise;
+        // Wait for download to complete or fail
+        const failure = await download.failure();
+        if (failure) {  
+        console.log('Download failed: ', failure); 
+        } else {
+        console.log('Download succeeded');
+        }
+    
+    });
+        
 })
