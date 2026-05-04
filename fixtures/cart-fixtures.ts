@@ -4,7 +4,6 @@ import { LoginPage } from '../page-objects/saucedemo/LoginPage';
 import { ProductPage } from '../page-objects/saucedemo/ProductPage';
 import { CartPage} from '../page-objects/saucedemo/CartPage';
 import { SauceDemoUsers } from '../utils/demo-user-data';
-import { log } from 'node:console';
 
 type CartFixtures = {
     cartWithProducts: CartPage;
@@ -22,8 +21,9 @@ export const test = base.extend<CartFixtures>({
         await productPage.addProductToCartByName('Sauce Labs Backpack')
         await productPage.addProductToCartByName('Sauce Labs Bike Light')
         await productPage.goToCart();
-        const cartPage = new CartPage(page)
+        const cartPage = new CartPage(page);
         await use(cartPage);
         
     }
 })
+export {expect} from '@playwright/test'

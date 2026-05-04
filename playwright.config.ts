@@ -65,9 +65,36 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    { name: 'setup', testMatch: /.*\.setup\.ts/ },
+    {
+ 
+      name: 'standard-user',
+       
+      use: { storageState: 'playwright/.auth/standard.json' },
+       
+      dependencies: ['setup'],
+       
+      testMatch: /.*standard.*\.spec\.ts/,
+       
+      },
+       
+      {
+       
+      name: 'problem-user',
+       
+      use: { storageState: 'playwright/.auth/performance.json' },
+       
+      dependencies: ['setup'],
+       
+      testMatch: /.*performance.*\.spec\.ts/,
+       
+      },      
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'],
+      storageState: 'playwright/.auth/user.json'
+    },
+    dependencies: ['setup'],
     },
 
     // {

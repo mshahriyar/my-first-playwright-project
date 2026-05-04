@@ -1,7 +1,7 @@
 import {test, expect} from '../../../fixtures/auth_fixtures';
 import { ProductPage } from '../../../page-objects/saucedemo/ProductPage';
 
-test('add product with auto login', async ({ page, loggedInAsStandardUser }) => {
+test('add product with auto login', async ({  page, loggedInAsStandardUser}) => {
     const productPage = new ProductPage(page);
     await productPage.addProductToCartByName('Sauce Labs Backpack');
     const cartCount = await productPage.getCartItemCount();
