@@ -49,10 +49,10 @@ test.describe('iframes', () => {
         await editor.evaluate((el) => {
             el.setAttribute('contenteditable', 'true');
         });
-        await editor.fill('Testing iframe interaction');
+        await editor.fill('Your content goes here.');
 
         // Verify content inside iframe
-        await expect(editor).toHaveText('Testing iframe interaction');
+        await expect(editor).toHaveText('Your content goes here.');
 
         //back to main page
         await expect(header).toBeVisible();
