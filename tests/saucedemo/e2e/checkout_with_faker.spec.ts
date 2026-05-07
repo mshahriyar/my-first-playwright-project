@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 
 
 test.describe('SauceDemo Checkout Tests with Faker', () => {
-    test('User can checkout with faker generated data', async ({ authenticatedPage, productPage, cartPage, checkoutPage }) => {
+    test('User can checkout with faker generated data', async ({ page, productPage, cartPage, checkoutPage }) => {
         //generate random data
         const checkoutData = {
             firstName: faker.person.firstName(),
@@ -27,7 +27,7 @@ test.describe('SauceDemo Checkout Tests with Faker', () => {
         await checkoutPage.fillShippingInformation(shippingInfo);
         await checkoutPage.clickContinue();
         await checkoutPage.clickFinish();
-        await expect(authenticatedPage).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
+        await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
     });
 
     test('Checkout with multiple random users data', async ({ authenticatedPage, productPage, cartPage, checkoutPage }) => {  
