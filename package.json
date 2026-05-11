@@ -20,7 +20,11 @@
     "codegen": "playwright codegen",
     "codegen:saucedemo": "playwright codegen https://www.saucedemo.com",
     "codegen:todomvc": "playwright codegen https://demo.playwright.dev/todomvc",
-    "install:browsers": "playwright install"
+    "install:browsers": "playwright install",
+    "test:allure": "playwright test --reporter=allure-playwright",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "keywords": [
     "playwright",

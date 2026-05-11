@@ -30,10 +30,15 @@ export default defineConfig({
  reporter: [
   ['html'],
 
-  ['list'],
+  ['allure-playwright', {
+    detail: true,
+    outputFolder: 'allure-results',  
+    suiteTitle: true,
+  }],
 
   ['json', { outputFile: 'test-results.json' }],
   ],
+  
 // Global test timeout
 
   timeout: 30 * 1000, // 30 seconds
